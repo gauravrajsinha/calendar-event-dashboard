@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar Toggle Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .main-calendar-grid {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            width: 100%;
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .main-calendar-grid.full-width-calendar {
+            grid-template-columns: 1fr;
+        }
+
+        .calendar-container {
+            background-color: #f0f4ff;
+            padding: 20px;
+            position: relative;
+            height: 100%;
+        }
+
+        .event-sidebar {
+            background-color: #ffffff;
+            border-left: 1px solid #e0e0e0;
+            padding: 20px;
+            position: relative;
+            height: 100%;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #toggle-sidebar, #show-sidebar {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: white;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            z-index: 100;
+        }
+
+        #toggle-sidebar {
+            left: -20px;
+        }
+
+        #show-sidebar {
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-calendar-grid">
+        <div class="calendar-container">
+            <h1>Calendar Content</h1>
+            <p>This is where the calendar would be displayed.</p>
+
+            <!-- Toggle button that shows when sidebar is hidden -->
+            <button id="show-sidebar" class="hidden">
+                Show Sidebar &gt;
+            </button>
+        </div>
+
+        <div class="event-sidebar">
+            <h2>Events</h2>
+            <p>This is where events would be listed.</p>
+
+            <!-- Toggle button for sidebar -->
+            <button id="toggle-sidebar">
+                &lt; Hide Sidebar
+            </button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleSidebarButton = document.getElementById('toggle-sidebar');
+            const showSidebarButton = document.getElementById('show-sidebar');
+            const eventSidebar = document.querySelector('.event-sidebar');
+            const calendarMainGrid = document.querySelector('.main-calendar-grid');
+
+            // Hide sidebar function
+            function hideSidebar() {
+                console.log('Hiding sidebar');
+                eventSidebar.classList.add('hidden');
+                calendarMainGrid.classList.add('full-width-calendar');
+                showSidebarButton.classList.remove('hidden');
+            }
+
+            // Show sidebar function
+            function showSidebar() {
+                console.log('Showing sidebar');
+                eventSidebar.classList.remove('hidden');
+                calendarMainGrid.classList.remove('full-width-calendar');
+                showSidebarButton.classList.add('hidden');
+            }
+
+            // Add event listeners
+            toggleSidebarButton.addEventListener('click', hideSidebar);
+            showSidebarButton.addEventListener('click', showSidebar);
+        });
+    </script>
+</body>
+</html>
