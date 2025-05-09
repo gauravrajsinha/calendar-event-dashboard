@@ -2,16 +2,20 @@
 
 A beautiful, responsive calendar application for educational institutions that allows teachers, students, administrators, and parents to manage and view events.
 
-> **Note:** To complete the setup of this README, please replace the placeholder images in the `screenshots/` directory with the actual screenshots from your application:
+> **Note:** The ASCII art boxes below are placeholders for screenshots. To replace them with actual screenshots:
 >
-> 1. `calendar-overview.png` - Main calendar view
-> 2. `event-details.png` - Event details view
-> 3. `create-event.png` - Create event form
-> 4. `edit-event.png` - Edit event form
-> 5. `dashboard.png` - Dashboard view
-> 6. `add-new-event.png` - Add new event form
-
-![Calendar Overview](screenshots/calendar-overview.png)
+> 1. Create a `screenshots` directory: `mkdir -p screenshots`
+> 2. Save your application screenshots with these names:
+>     - Main calendar view → `screenshots/calendar-overview.png`
+>     - Event details view → `screenshots/event-details.png`
+>     - Create event form → `screenshots/create-event.png`
+>     - Edit event form → `screenshots/edit-event.png`
+>     - Dashboard view → `screenshots/dashboard.png`
+>     - Add new event form → `screenshots/add-new-event.png`
+> 3. Replace each ASCII art section with Markdown image syntax:
+>     ```markdown
+>     ![Calendar Overview](screenshots/calendar-overview.png)
+>     ```
 
 ## Tech Stack
 
@@ -42,27 +46,105 @@ A beautiful, responsive calendar application for educational institutions that a
 
 ### Main Calendar View
 
-![Calendar Main View](screenshots/calendar-overview.png)
+```
++--------------------------------------------------+
+|                                                  |
+|                                                  |
+|                                                  |
+|                Calendar Overview                 |
+|                                                  |
+|    Main calendar interface with monthly view     |
+|              and sidebar for events              |
+|                                                  |
+|                                                  |
+|                                                  |
++--------------------------------------------------+
+```
 
 ### Event Details
 
-![Event Details](screenshots/event-details.png)
+```
++--------------------------------------------------+
+|                                                  |
+|                                                  |
+|                                                  |
+|                  Event Details                   |
+|                                                  |
+|     Event details showing date, time, location,  |
+|              and description                     |
+|                                                  |
+|                                                  |
+|                                                  |
++--------------------------------------------------+
+```
 
 ### Create New Event
 
-![Create New Event](screenshots/create-event.png)
+```
++--------------------------------------------------+
+|                                                  |
+|                                                  |
+|                                                  |
+|                Create New Event                  |
+|                                                  |
+|        Form for creating a new calendar event    |
+|        with fields for details, dates, etc.      |
+|                                                  |
+|                                                  |
+|                                                  |
++--------------------------------------------------+
+```
 
 ### Edit Event
 
-![Edit Event](screenshots/edit-event.png)
+```
++--------------------------------------------------+
+|                                                  |
+|                                                  |
+|                                                  |
+|                   Edit Event                     |
+|                                                  |
+|     Form for editing an existing calendar event  |
+|          with pre-filled information             |
+|                                                  |
+|                                                  |
+|                                                  |
++--------------------------------------------------+
+```
 
 ### Dashboard
 
-![Dashboard](screenshots/dashboard.png)
+```
++--------------------------------------------------+
+|                                                  |
+|                                                  |
+|                                                  |
+|                   Dashboard                      |
+|                                                  |
+|     Dashboard showing today's and upcoming       |
+|                    events                        |
+|                                                  |
+|                                                  |
+|                                                  |
++--------------------------------------------------+
+```
 
 ### Add New Event Form
 
-![Add New Event](screenshots/add-new-event.png)
+```
++--------------------------------------------------+
+|                                                  |
+|                                                  |
+|                                                  |
+|                 Add New Event                    |
+|                                                  |
+|     Dedicated page for adding new events         |
+|              to the calendar                     |
+|                                                  |
+|                                                  |
+|                                                  |
++--------------------------------------------------+
+```
 
 ## Installation
 
